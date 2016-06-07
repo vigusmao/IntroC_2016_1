@@ -3,11 +3,11 @@
 #include <time.h>
 
 int sorteie(int a, int b) {
-    return random() % (b-a+1) + a;
+    return rand() % (b-a+1) + a;
 }
 
 int dado_viciado(float prob_6) {
-    int max = 1000000;
+    int max = 1000;
     int resultado = sorteie(1, max);
     if (resultado <= max * prob_6) {
         return 6;
